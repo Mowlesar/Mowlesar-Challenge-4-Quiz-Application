@@ -1,0 +1,11 @@
+var startButton = document.getElementById("start-button")
+var introContainer = document.getElementById("intro-container")
+var quizContainer = document.getElementById("quiz-container")
+var questionText= document.getElementById("question")
+var optionList = document.getElementById("options-list")
+var feedbackText = document.getElementById("feedback-text")
+var timerText = document.getElementById("timer-text")
+var timer = document.getElementById("timer")
+var initalsContainer = document.getElementById("initals-container")
+var highscoresLinkContainer = document.getElementById("highscores-link-container")
+
