@@ -1,37 +1,68 @@
 body {
-    font-family: monospace;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-header {
-    display: inline block;
+  }
+  
+  header {
     text-align: center;
-    background-color: tan;
-    padding: 20px;  
-}
-
-h1 {
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  h1 {
     margin: 0;
-}
-
-#intro-container,
-#quiz-container,
-#question-container,
-#feedback-container
-#inital-container
- {
+  }
+  
+  #intro-container,
+  #quiz-container,
+  #initials-container,
+  #highscores-link-container {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 600px;
+  }
+  
+  #quiz-container,
+  #initials-container,
+  #highscores-link-container {
+    display: none;
+  }
+  
+  #question-container {
+    margin-bottom: 20px;
+  }
+  
+  #options-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .choice {
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  #feedback-container {
+    margin-bottom: 20px;
+  }
+  
+  #timer-container {
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  footer {
     text-align: center;
     padding: 20px;
-    margin: 50px auto;
-}
-
-#quiz-container,
-#initals-container {
-  display: none;
-}
-
-#choice-list {
-    text-align: center;
-    list-style-type: none;
-}
+    background-color: #f0f0f0;
+  }
+  
+  #start-button,
+  #submit-button {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+  }
+  
