@@ -14,7 +14,7 @@ var timer;
 var timeLeft;
 var currentQuestionsIndex = 0;
 var score = 0;
-var quizStart = false;
+var quizStarted = false;
 
 // set up questions
 
@@ -119,4 +119,13 @@ var questions = [
     ],
     correctAnswer: 1
   },
-]
+];
+
+startButton.addEventListener("click", startQuiz);
+
+function startQuiz() 
+
+function showQuestion()
+
+function endQuiz ()
+
