@@ -38,7 +38,7 @@ body {
     padding: 0;
   }
   
-  .choice {
+  .option {
     margin: 10px 0;
     cursor: pointer;
   }
@@ -64,5 +64,16 @@ body {
     background-color: #f0f0f0;
     border: none;
     cursor: pointer;
+  }
+  
+  #feedback-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  
+  #feedback-text {
+    text-align: center;
   }
   
