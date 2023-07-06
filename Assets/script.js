@@ -148,7 +148,10 @@ function startQuiz() {
 }
 
 function showQuestion() {
-
+  if (remainingQuestions.length <= currentQuestionIndex) {
+    endQuiz();
+    return;
+  }
   var question = remainingQuestions[currentQuestionIndex];
   questionText.textContent = question.question;
   choicesList.innerHTML = "";
@@ -162,10 +165,6 @@ function showQuestion() {
     choiceButton.addEventListener("click", handleChoiceClick);
     choiceElement.appendChild(choiceButton);
     choicesList.appendChild(choiceElement);
-  }
-  if (remainingQuestions.length === 0) {
-    endQuiz();
-    return;
   }
 }
 
@@ -221,5 +220,3 @@ function endQuiz() {
     feedbackText.textContent = `The quiz is over. Your score is: ${score} out of ${questions.length}`;
   }
 }
-
-
