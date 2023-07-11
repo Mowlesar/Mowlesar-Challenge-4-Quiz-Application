@@ -8,6 +8,7 @@ var timerText = document.getElementById("timer-text");
 var initialsContainer = document.getElementById("initials-container");
 var highscoresLinkContainer = document.getElementById("highscores-link-container");
 var submitButton = document.getElementById("submit-button")
+var finalMessage = document.getElementById("final-message")
 
 var timer;
 var timeLeft;
@@ -212,11 +213,11 @@ function endQuiz() {
   quizContainer.style.display = "none";
   initialsContainer.style.display = "block";
   highscoresLinkContainer.style.display = "block";
-  feedbackText.style.display = "block";
+  feedbackText.style.display = "none";
 
   if (score === questions.length) {
-    feedbackText.textContent = `Congratulations! You scored ${score} out of ${questions.length}. You answered all questions correctly!`;
+    finalMessage.textContent = `Congratulations! You scored ${score} out of ${questions.length}. You answered all questions correctly!`;
   } else {
-    feedbackText.textContent = `The quiz is over. Your score is: ${score} out of ${questions.length}`;
+    finalMessage.textContent = `The quiz is over. Your score is: ${score} out of ${questions.length}`;
   }
-}
+} 
