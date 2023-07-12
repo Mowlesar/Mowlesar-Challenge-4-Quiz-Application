@@ -197,10 +197,15 @@ submitButton.addEventListener("click", function(event) {
 
   var initialsInput = document.getElementById("initial-input");
   var initials = initialsInput.value.trim(); 
+  var savedScore = JSON.parse(localStorage.getItem(`savedScores`)) || [];
+  var currentScore = {
+    score: score,
+    initials: initials
+  }
 
   if (initials !== "") {
-    localStorage.setItem("score", score);
-    localStorage.setItem("initials", initials);
+    savedScore.push(currentScore);
+    localStorage.setItem("savedScore", JSON.stringify(savedScore));
 
     window.location.href = "highscores-files/highscores.html";
   }

@@ -1,9 +1,10 @@
-var score = localStorage.getItem("score");
-var initials = localStorage.getItem("initials");
+var savedScore = JSON.parse(localStorage.getItem)("savedScores") || [];
 
 var scoresList = document.getElementById("scores-list");
 
-var listItem = document.createElement("li");
-listItem.textContent = `${initials}: ${score}`;
 
+savedScore.map((score) => {
+    var listItem = document.createElement("li");
+listItem.textContent = `${score.initials}: ${score.score}`;
 scoresList.appendChild(listItem);
+});
